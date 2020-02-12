@@ -1,0 +1,60 @@
+.heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    width: 60px;
+    background-color: #eb347a;
+    transform: rotate(-45deg);
+    animation-name: fade;
+    animation-duration: 5s;
+    animation-iteration-count: 5;
+}
+.heart::before {
+    background-color: #eb347a;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    left: 25px;
+    animation-name: fade;
+    animation-duration: 5s;
+    animation-iteration-count: 5;
+}
+.heart::after {
+    content: "";
+    top: -25px;
+    left: 0;
+    background-color: #eb347a;
+    border-radius: 50%;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    animation-name: fade;
+    animation-duration: 5s;
+    animation-iteration-count: 5;
+}
+
+@keyframes fade {
+    0% {
+        background-color: gray;
+    }
+    100% {
+        background-color: #eb347a;
+    }
+}
+h1 {
+    font-family: "Pacifico";
+    color: red;
+    font-size: 36px;
+}
+@media (max-width: 500px) {
+    h1 {
+        font-size: 24px;
+    }
+}
